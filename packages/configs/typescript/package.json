@@ -1,0 +1,15 @@
+{
+  "name": "@poc/typescript",
+  "version": "1.0.0",
+  "description": "POC typescript configurations",
+  "keywords": [
+    "typescript",
+    "configurations"
+  ],
+  "author": "Leonardo Pinheiro <leonardo.pinheiro.dev@gmail.com>",
+  "license": "UNLICENSED",
+  "main": "tsconfig.json",
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  }
+}
