@@ -1,12 +1,8 @@
 {
   "name": "@poc/angular-component",
   "version": "1.0.0",
-  "description": "",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ionic-team/ionic.git"
-  },
+  "description": "Angular specific wrapper for webcomponents library",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "yarn build.ng",
     "build.fesm": "rollup --config ./scripts/rollup.config.js",
@@ -28,7 +24,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@poc/stencil-component": "*",
+    "@poc/core": "*",
     "tslib": "^1.9.3"
   },
   "peerDependencies": {
