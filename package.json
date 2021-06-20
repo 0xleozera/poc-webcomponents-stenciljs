@@ -13,17 +13,23 @@
   "version": "1.0.0",
   "author": "Leonardo Pinheiro <leonardo.pinheiro.dev@gmail.com>",
   "license": "UNLICENSED",
+  "scripts": {
+    "refresh": "lerna clean -y && lerna bootstrap"
+  },
   "config": {
     "commitizen": {
       "path": "cz-gitmoji"
     }
   },
-  "workspaces": [
-    "packages/*",
-    "packages/configs/*",
-    "packages/components/*",
-    "packages/apps/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/configs/*",
+      "packages/components/*",
+      "packages/apps/*"
+    ],
+    "nohoist": ["**/@types", "**/@types/**"]
+  },
   "devDependencies": {
     "lerna": "^4.0.0",
     "@poc/eslint": "*",
