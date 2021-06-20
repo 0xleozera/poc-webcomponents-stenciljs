@@ -1,3 +1,52 @@
-:host {
-  display: block;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  --primary-color: #12194b;
+  --secondary-color: #f04e98;
+  --accent-color: #ffffff;
+  --full-height: 100vh;
+  --primary-font: 'Montserrat', sans-serif;
+  --default-spacing: 8px;
+}
+
+.poc-hello-world__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  height: var(--full-height);
+}
+
+.poc-hello-world__title {
+  font-family: var(--primary-font);
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.poc-hello-world__title span {
+  color: var(--secondary-color);
+}
+
+.poc-hello-world__button {
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent-color);
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-top: calc(var(--default-spacing) * 2);
 }

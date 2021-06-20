@@ -1,16 +1,33 @@
-import { Component, Host, h } from '@stencil/core'
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core'
 
 @Component({
   tag: 'poc-hello-world',
   styleUrl: 'poc-hello-world.css',
-  shadow: true,
 })
 export class PocHelloWorld {
+  @Prop() environment: string = 'VanillaJS'
+
+  @Event() callbackAfterClick: EventEmitter
+
+  handleButtonClick() {
+    console.log('handleButtonClick has been called!')
+    this.callbackAfterClick.emit()
+  }
+
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <main class="poc-hello-world__container">
+        <h1 class="poc-hello-world__title">
+          I'm running at <span>{this.environment}</span> 🔌
+        </h1>
+        <button
+          class="poc-hello-world__button"
+          type="button"
+          onClick={() => this.handleButtonClick()}
+        >
+          Click me
+        </button>
+      </main>
     )
   }
 }

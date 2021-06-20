@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PocHelloWorld {
+        "environment": string;
     }
 }
 declare global {
@@ -22,6 +23,8 @@ declare global {
 }
 declare namespace LocalJSX {
     interface PocHelloWorld {
+        "environment"?: string;
+        "onCallbackAfterClick"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
         "poc-hello-world": PocHelloWorld;
