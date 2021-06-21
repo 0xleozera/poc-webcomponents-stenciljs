@@ -14,22 +14,24 @@
   "author": "Leonardo Pinheiro <leonardo.pinheiro.dev@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "refresh": "lerna clean -y && lerna bootstrap"
+    "start:core": "npx lerna run start --scope @poc/core",
+    "start:apps": "npx lerna run start --scope '{@poc/react-app,@poc/angular-app,@poc/vue2-app,@poc/vue3-app'}",
+    "build:components": "npx lerna run build --scope '{@poc/core,@poc/angular-component,@poc/react-component,@poc/vue-component'}",
+    "install": "npx lerna bootstrap",
+    "clean": "npx lerna clean",
+    "refresh": "yarn clean -y && yarn install"
   },
   "config": {
     "commitizen": {
       "path": "cz-gitmoji"
     }
   },
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "packages/configs/*",
-      "packages/components/*",
-      "packages/apps/*"
-    ],
-    "nohoist": ["**/@types", "**/@types/**"]
-  },
+  "workspaces": [
+    "packages/*",
+    "packages/configs/*",
+    "packages/components/*",
+    "packages/apps/*"
+  ],
   "devDependencies": {
     "lerna": "^4.0.0",
     "@poc/eslint": "*",
