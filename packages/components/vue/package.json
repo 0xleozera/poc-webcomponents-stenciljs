@@ -7,10 +7,10 @@
   "scripts": {
     "lint": "echo add linter",
     "test": "jest",
-    "build": "npm run clean && npm run compile && npm run bundle",
+    "build": "yarn clean && yarn compile && yarn bundle",
     "bundle": "rollup --config rollup.config.js",
     "clean": "rimraf dist dist-transpiled",
-    "compile": "npm run tsc",
+    "compile": "yarn tsc",
     "tsc": "tsc -p ."
   },
   "main": "./dist/index.js",
