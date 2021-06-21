@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "POC webcomponents running at react app",
   "private": true,
+  "workspaces": {
+    "nohoist": ["**"]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
