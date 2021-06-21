@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>POC Webcomponents StencilJS</title>
+    <script type="module" src="/build/poc.esm.js"></script>
+    <script nomodule src="/build/poc.js"></script>
+  </head>
+  <body>
+    <poc-hello-world environment="Vanilla"></poc-hello-world>
+    <script>
+      const pocHelloWorld = document.querySelector('poc-hello-world');
+      pocHelloWorld.addEventListener('callbackAfterClick', () => console.log('Callback has been called!'))
+    </script>
+  </body>
+</html>

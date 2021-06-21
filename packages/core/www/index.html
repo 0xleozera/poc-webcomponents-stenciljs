@@ -1,0 +1,4 @@
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>POC Webcomponents StencilJS</title> <script type="module" data-stencil data-resources-url="/build/" data-stencil-namespace="poc">import{p as o,b as r}from"/build/p-d1b040cb.js";(()=>{const r=import.meta.url,n={};return""!==r&&(n.resourcesUrl=new URL(".",r).href),o(n)})().then((o=>r([["p-b93434b7",[[0,"poc-hello-world",{environment:[1]}]]]],o)));</script> <script nomodule="" src="/build/poc.js" data-stencil></script> </head> <body> <poc-hello-world environment="Vanilla"></poc-hello-world> <script>
+      const pocHelloWorld = document.querySelector('poc-hello-world');
+      pocHelloWorld.addEventListener('callbackAfterClick', () => console.log('Callback has been called!'))
+    </script> </body></html>

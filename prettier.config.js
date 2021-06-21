@@ -1,3 +1,6 @@
-const config = require('@poc/prettier')
-
-module.exports = config
+module.exports = {
+  singleQuote: true,
+  semi: false,
+  trailingComma: 'all',
+  allowParens: 'avoid',
+}
