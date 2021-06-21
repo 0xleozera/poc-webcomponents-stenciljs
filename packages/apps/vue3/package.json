@@ -1,7 +1,10 @@
 {
-  "name": "vue3",
-  "version": "0.1.0",
+  "name": "@poc/vue3-app",
+  "version": "1.0.0",
   "private": true,
+  "workspaces": {
+    "nohoist": ["**"]
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
