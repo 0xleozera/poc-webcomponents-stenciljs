@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core'
-import { defineCustomElements } from '@poc/stencil-component/loader'
+import { defineCustomElements } from '@poc/core/loader'
 
-import { DemoComponent } from './directives/proxies'
+import { PocHelloWorld } from './directives/proxies'
 
 defineCustomElements(window)
 
 const DECLARATIONS = [
   // proxies
-  DemoComponent,
+  PocHelloWorld,
 ]
 
 @NgModule({

@@ -14,6 +14,7 @@
 
 # production
 **/dist
+**/dist-transpiled
 
 # misc
 **/DS_Store
