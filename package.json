@@ -17,9 +17,9 @@
     "start:core": "npx lerna run start --scope @poc/core",
     "start:apps": "npx lerna run start --scope '{@poc/react-app,@poc/angular-app,@poc/vue2-app,@poc/vue3-app'}",
     "build:components": "npx lerna run build --scope '{@poc/core,@poc/angular-component,@poc/react-component,@poc/vue-component'}",
-    "install": "npx lerna bootstrap",
+    "bootstrap": "npx lerna bootstrap",
     "clean": "npx lerna clean",
-    "refresh": "yarn clean -y && yarn install"
+    "refresh": "yarn clean -y && yarn bootstrap"
   },
   "config": {
     "commitizen": {
